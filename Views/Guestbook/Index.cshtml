@@ -1,0 +1,28 @@
+@model IEnumerable<Guest>
+
+@{
+    ViewBag.Title = "Guestbook Overview";
+    Layout = "_Layout";
+}
+
+<h2>Guestbook - Overview</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Title</th>
+      <th scope="col">Message</th>
+    </tr>
+  </thead>
+  <tbody>
+  @foreach (var guest in Model)
+    {
+        <tr>
+             <td>@guest.Id</td>
+                    <td>@guest.Name</td>
+                    <td>@guest.Title</td>
+                    <td>@guest.Message</td>
+        </tr>
+    }
+    </table>
